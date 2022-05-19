@@ -1,7 +1,8 @@
 <template>
   <div class="container mt-2">
+    
     <b-card title="titulo" class="mb-2">
-      <b-card-text>Descrição</b-card-text>
+      <b-card-text>descrição</b-card-text>
 
       <b-button variant="outline-secondary" class="mr-2"> Editar </b-button>
       <b-button variant="outline-danger" class="mr-2"> Excluir </b-button>
