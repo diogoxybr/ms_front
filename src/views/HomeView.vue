@@ -2,7 +2,7 @@
   <div class="container mt-2">
     <div v-for="(monitor, index) in monitors" :key="index">
       <b-card :title="monitor.subject" class="mb-2">
-        <b-card-text>{{ monitor.desciption }}</b-card-text>
+        <b-card-text>{{ monitor.description }}</b-card-text>
 
         <b-button variant="outline-secondary" class="mr-2" @click="edit(index)"> Editar </b-button>
         <b-button variant="outline-danger" class="mr-2" @click="remove(monitor, index)"> Excluir </b-button>

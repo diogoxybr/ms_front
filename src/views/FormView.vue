@@ -7,13 +7,16 @@
       >
         <b-form-input
           id="subject"
-          v-model="form.subject"
+          v-model.trim="$v.form.subject.$model"
           type="text"
           placeholder="Ex: alface"
           required
           autocomplete="off"
+          :state="getValidation"
+          aria-describedby="subject-feedback"
         >
         </b-form-input>
+        <b-form-invalid-feedback id="subject-feedback"> Campo obrigatório </b-form-invalid-feedback>
       </b-form-group>
 
     <b-form-group
@@ -30,7 +33,12 @@
       ></b-form-textarea>
     </b-form-group>
 
-    <b-button type="submit" variant="outline-primary" @click="saveMonitor"> Salvar </b-button>
+    <b-button
+      type="submit"
+      variant="outline-primary"
+      @click="saveMonitor"
+      :disabled="!getValidation"
+    > Salvar </b-button>
     </b-form>
 
   </div>
@@ -38,6 +46,8 @@
 
 <script>
 import toastMixin from '@/mixins/toastMixin';
+import {required, minLength } from "vuelidate/lib/validators";
+
 export default {
   name: "FormView",
 
@@ -50,6 +60,15 @@ export default {
         description: ""
       },
       methodSave: "new"
+    }
+  },
+
+  validations: {
+    form: {
+      subject: {
+        required,
+        minLength: minLength(3)
+      }
     }
   },
 
@@ -75,8 +94,17 @@ export default {
       let monitors = (localStorage.getItem("monitors")) ? JSON.parse(localStorage.getItem("monitors")) : [];
       monitors.push(this.form);
       localStorage.setItem("monitors", JSON.stringify(monitors));
-      this.showToast("success", "Sucesso!", "Monitoramento criada com sucesso !");
+      this.showToast("success", "Sucesso!", "Monitoramento criado com sucesso !");
       this.$router.push({ name: "home"});
+    }
+  },
+
+  computed: {
+    getValidation(){
+      if(this.$v.form.subject.$dirty === false) {
+        return null;
+      }
+      return !this.$v.form.subject.$error;
     }
   }
 }
