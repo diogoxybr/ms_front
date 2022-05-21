@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import NewpView from '../views/NewpView.vue'
+import FormView from '../views/FormView.vue'
 import PlantsView from '../views/PlantsView.vue'
 import GuideView from '../views/GuideView.vue'
 import ShopView from '../views/ShopView.vue'
@@ -15,9 +15,9 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/newplanting',
-    name: 'newplanting',
-    component: NewpView
+    path: '/form',
+    name: 'form',
+    component: FormView
   },
   {
     path: '/plants',

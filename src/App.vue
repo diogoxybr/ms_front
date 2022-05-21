@@ -2,14 +2,14 @@
   <div id="app">
 
 <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="/"><img src="https://img.icons8.com/office/344/potted-plant.png" height="25" width="25"> Magic Seed</b-navbar-brand>
+    <b-navbar-brand href="/"> Magic Seed </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item to="/">Início</b-nav-item>
-        <b-nav-item to="/newplanting">Novo plantio</b-nav-item>
+        <b-nav-item to="/form">Novo plantio</b-nav-item>
         <b-nav-item to="/plants">Plantas</b-nav-item>
         <b-nav-item to="/guide">Guia de cultivo</b-nav-item>
         <b-nav-item to="/shop">Loja</b-nav-item>
