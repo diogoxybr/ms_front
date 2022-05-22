@@ -14,6 +14,7 @@
     <template v-else>
     <div v-for="(monitor, index) in monitors" :key="index">
       <b-card :title="monitor.subject" class="mb-2">
+        <b-card-text class="mb-0">{{ monitor.plants }}</b-card-text>
         <b-card-text>{{ monitor.description }}</b-card-text>
 
         <b-button variant="outline-secondary" class="mr-2" @click="edit(index)"> Editar </b-button>
@@ -52,7 +53,6 @@ export default {
 
     created() {
       this.monitors = (localStorage.getItem("monitors")) ? JSON.parse(localStorage.getItem("monitors")) : [];
-
     },
 
     methods: {

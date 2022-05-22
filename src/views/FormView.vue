@@ -9,7 +9,7 @@
           id="subject"
           v-model.trim="$v.form.subject.$model"
           type="text"
-          placeholder="Ex: alface"
+          placeholder="(Mínimo de 3 caracteres)"
           required
           autocomplete="off"
           :state="getValidation"
@@ -18,6 +18,18 @@
         </b-form-input>
         <b-form-invalid-feedback id="subject-feedback"> Campo obrigatório </b-form-invalid-feedback>
       </b-form-group>
+
+    <b-form-group
+      label= "Selecione uma planta"
+      label-for="plants"
+      >
+      <b-form-select
+      id="plants"
+      v-model="form.plants"
+      :options="optionsList"
+      required
+      ></b-form-select>
+    </b-form-group>
 
     <b-form-group
       label= "Descrição"
@@ -37,7 +49,6 @@
       type="submit"
       variant="outline-primary"
       @click="saveMonitor"
-      :disabled="!getValidation"
     > Salvar </b-button>
     </b-form>
 
@@ -57,9 +68,24 @@ export default {
     return{
       form: {
         subject: "",
+        plants:"",
         description: ""
       },
-      methodSave: "new"
+      methodSave: "new",
+        optionsList: [
+          { value: "Ervilha", text: "Ervilha" },
+          { value: "Cenoura", text: "Cenoura" },
+          { value: "Abobrinha", text: "Abobrinha" },
+          { value: "Beterraba", text: "Beterraba" },
+          { value: "Alface", text: "Alface" },
+          { value: "Vagem", text: "Vagem" },
+          { value: "Cebolinha", text: "Cebolinha" },
+          { value: "Acelga", text: "Acelga" },
+          { value: "Tomate", text: "Tomate" },
+          { value: "Pepino", text: "Pepino" },
+          { value: "Espinafre", text: "Espinafre" },
+          { value: "Rabanete", text: "Rabanete" }
+        ]
     }
   },
 
@@ -68,6 +94,9 @@ export default {
       subject: {
         required,
         minLength: minLength(3)
+      },
+      plants: {
+        required
       }
     }
   },
@@ -82,6 +111,9 @@ export default {
 
   methods: {
     saveMonitor() {
+      this.$v.$touch();
+      if(this.$v.$error) return;
+
       if(this.methodSave === "update"){
         let monitors =  JSON.parse(localStorage.getItem("monitors"));
         monitors[this.$route.params.index] = this.form;
