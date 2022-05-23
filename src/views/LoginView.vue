@@ -2,7 +2,7 @@
   <b-row class="vh-100 vw-100 row-login">
     <b-col sm="5" class="d-flex justify-content-center align-items-center left-login">
       <div class="col-8">
-        <h2 class="text-center mb-5 title-login">Faça o login</h2>
+        <h2 class="text-center mb-5 title-login">Faça o login no Magic Seed !</h2>
 
         <b-form>
           <b-form-group
@@ -40,7 +40,7 @@
               type="button"
               variant="success"
               block
-              @click="login">
+              @click="goToHome">
               <i class="fas fa-sign-in-alt"></i> Entrar
             </b-button>
 
@@ -99,6 +99,10 @@ export default {
 
     goToRegister() {
       this.$router.push({name: 'register'});
+    },
+
+    goToHome() {
+      this.$router.push({name: 'home'});
     },
 
     getValidation(field) {
