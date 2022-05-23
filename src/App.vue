@@ -5,7 +5,7 @@
     <a class="navbar-brand" href="/">
         <img id="logo" alt="Logo" src="../src/assets/logo.png" height="32" />
     </a>
-    <b-navbar-brand href="/"><font face="Berlin Sans FB"> Magic Seed </font></b-navbar-brand>
+    <b-navbar-brand href="/">Magic Seed</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
