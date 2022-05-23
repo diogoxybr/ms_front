@@ -140,7 +140,6 @@ export default {
 }
 
 .img-login {
-  width: 600px;
-  height: 600px;
+  width: 400px;
 }
 </style>
