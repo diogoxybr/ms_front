@@ -1,8 +1,7 @@
 
 <template>
-  <div class="about">
-    <h1>Sobre</h1>
-    <p>Equipe:</p>
+  <div class="container mt-5">
+    <h1 class="mb-4">Quem somos:</h1>
     <ul>
       <li>Diogo Araújo -> RA: 082180013</li>
       <li>Humberto Gonzaga -> RA: 082180036</li>

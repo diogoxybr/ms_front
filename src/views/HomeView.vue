@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-2">
+  <div class="container mt-3">
     <template v-if="isMonitorsEmpty">
       <div class="empty-data mt-5">
         <img src="../assets/images/emptygarden.svg" class="empty-data-image">
@@ -13,7 +13,7 @@
     </template>
     <template v-else>
     <div v-for="(monitor, index) in monitors" :key="index">
-      <b-card :title="monitor.subject" class="mb-2">
+      <b-card :title="monitor.subject" class="mb-3">
         <b-card-text class="mb-0">{{ monitor.plants }}</b-card-text>
         <b-card-text>{{ monitor.description }}</b-card-text>
 

@@ -2,7 +2,7 @@
   <div class="container mt-2">
     <b-form>
       <b-form-group
-        label= "Titulo"
+        label= "Título"
         label-for="subject"
       >
         <b-form-input
@@ -39,7 +39,7 @@
       id="description"
       v-model="form.description"
       type="text"
-      placeholder="Ex: Pé de alface que ganhei da minha mãe"
+      placeholder="Ex: Plantado na varanda"
       required
       autocomplete="off"
       ></b-form-textarea>
