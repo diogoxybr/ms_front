@@ -177,8 +177,7 @@ export default {
 }
 
 .img-register {
-  width: 500px;
-  height: 500px;
+  width: 400px;
 }
 
 </style>
