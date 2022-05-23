@@ -5,6 +5,8 @@ import FormView from '../views/FormView.vue'
 import PlantsView from '../views/PlantsView.vue'
 import GuideView from '../views/GuideView.vue'
 import ShopView from '../views/ShopView.vue'
+import LoginView from '../views/LoginView.vue'
+import RegisterView from '../views/RegisterView.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,16 @@ const routes = [
     path: '/shop',
     name: 'shop',
     component: ShopView
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: RegisterView
   },
   {
     path: '/about',

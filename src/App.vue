@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-<b-navbar toggleable="lg" type="dark" variant="info">
+<b-navbar toggleable="lg" type="dark" variant="info" v-if="notIsLoginPage">
     <a class="navbar-brand" href="/">
         <img id="logo" alt="Logo" src="../src/assets/logo.png" height="32" />
     </a>
@@ -26,8 +26,8 @@
           <template #button-content>
             <em>Usuário</em>
           </template>
-          <b-dropdown-item href="#">Perfil</b-dropdown-item>
-          <b-dropdown-item href="#">Sair</b-dropdown-item>
+          <b-dropdown-item to="/register">Alterar cadastro</b-dropdown-item>
+          <b-dropdown-item to="/login">Sair</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>
@@ -38,6 +38,16 @@
   </transition>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    notIsLoginPage() {
+      return this.$route.name !== "login" && this.$route.name !== "register";
+    }
+  }
+}
+</script>
 
 <style>
 .fade-enter-active, .fade-leave-active {
