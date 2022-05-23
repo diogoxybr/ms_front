@@ -138,7 +138,7 @@ export default {
     },
 
     register() {
-      this.showToast("success", "Sucesso!", "Monitoramento criado com sucesso !");
+      this.showToast("success", "Sucesso!", "Cadastro feito com sucesso !");
       this.goToLogin();
     },
 
