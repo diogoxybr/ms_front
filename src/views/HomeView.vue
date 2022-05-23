@@ -104,6 +104,6 @@ export default {
   align-items: center;
 }
 .empty-data-image {
-  width: 500px;
+  width: 400px;
 }
 </style>
