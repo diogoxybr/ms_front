@@ -1,7 +1,6 @@
 <template>
   <div class="container mt-5">
     <h1 class="mb-5">Bem vindo ao nosso Shopping !</h1>
-    <p></p>
     <b-card-group deck>
       <b-card title="Adubo Orgânico"
       img-src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSz_wL0idU_DdAS-mT3QkihS647KSjVNXIbuEsWY_9WknErm8_QsnOqDSWoRiCHNy57TipCsSYOx6ieG5EUsjAKlpJ1smFdzNaTrGNFnxiUHvIPTHr9-Z8x-Q&usqp=CAE"
@@ -11,7 +10,7 @@
       style="max-width: 15rem;"
       class="mb-4">
       <b-card-text>Biomix 1 kg</b-card-text>
-    <b-button variant="success" class="mr-2" href="https://www.casasbahia.com.br/fertilizante-organico-classe-a-biokashi-1kg-biomix-1533324311/p/1533324311">Comprar</b-button>
+    <b-button variant="success" class="mr-2" href="https://www.google.com/shopping/product/7535229380165716913?q=Adubo+Org%C3%A2nico+Biomix+1+kg&oq=Adubo+Org%C3%A2nico+Biomix+1+kg&gs_lcp=Cgtwcm9kdWN0cy1jYxAMMggIABAeEBYQGEoECEEYAFAAWABgpwpoAHAAeACAAbwBiAG8AZIBAzAuMZgBAKABAqABAcABAQ&sclient=products-cc&prds=eto:15541775573997256539_0,rsk:PC_8409019783894264544&sa=X&ved=0ahUKEwiBsoXJ7fT3AhXInpUCHcuuB_IQ8wII9wY">Comprar</b-button>
     </b-card>
 
     <b-card title="Tesoura de poda"
@@ -55,7 +54,7 @@
       style="max-width: 15rem;"
       class="mb-4">
       <b-card-text>Rischioto N35 </b-card-text>
-    <b-button variant="success" class="mr-2" href="https://www.casasbahia.com.br/fertilizante-organico-classe-a-biokashi-1kg-biomix-1533324311/p/1533324311">Comprar</b-button>
+    <b-button variant="success" class="mr-2" href="https://www.google.com/shopping/product/3518323381651178282?q=Vaso+de+planta+Rischioto+N35&prds=eto:4766259970905964477_0&sa=X&ved=0ahUKEwiVrZez7fT3AhXSvJUCHRJxAfsQ8gII1QcoAA">Comprar</b-button>
     </b-card>
 </b-card-group>
   </div>

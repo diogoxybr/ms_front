@@ -1,5 +1,12 @@
 <template>
   <div class="container mt-3">
+    <template>
+      <div class="center">
+        <!-- weather widget start --><a target="_blank" href="https://ibooked.com.br/weather/sao-bernardo-do-campo-17054"><img src="https://w.bookcdn.com/weather/picture/31_17054_1_8_17bc9c_250_13a085_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=&anc_id=30421"  alt="booked.net" class="mb-3"/></a><!-- weather widget end -->
+        <!-- weather widget start --><a target="_blank" href="https://ibooked.com.br/weather/sao-paulo-18266"><img src="https://w.bookcdn.com/weather/picture/31_18266_1_8_17bc9c_250_13a085_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=&anc_id=30421"  alt="booked.net" class="mb-3"/></a><!-- weather widget end -->
+        <!-- weather widget start --><a target="_blank" href="https://ibooked.com.br/weather/rio-de-janeiro-18486"><img src="https://w.bookcdn.com/weather/picture/31_18486_1_8_17bc9c_250_13a085_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=&anc_id=30421"  alt="booked.net" class="mb-3"/></a><!-- weather widget end -->
+      </div>
+    </template>
     <template v-if="isMonitorsEmpty">
       <div class="empty-data mt-5">
         <img src="../assets/images/emptygarden.svg" class="empty-data-image">
@@ -26,6 +33,7 @@
         <b-button
         variant="outline-primary"
         to="form"
+        class="center"
         > Cadastrar novo plantio </b-button>
     </template>
     <b-modal ref="modalRemove" hide-footer title="Exclusão de monitoramento">
@@ -83,12 +91,16 @@ export default {
     }
   }
 </script>
-
 <style scoped>
 .empty-data {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .empty-data-image {
   width: 500px;
