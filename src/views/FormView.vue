@@ -45,6 +45,17 @@
       ></b-form-textarea>
     </b-form-group>
 
+    <b-form-group
+      label= "Data de plantio"
+      label-for="dataPlantio"
+      >
+      <b-form-datepicker
+      id="dataPlantio"
+      v-model="form.dataPlantio"
+      label-no-date-selected="Selecione uma data"
+      ></b-form-datepicker>
+    </b-form-group>
+
     <b-button
       type="submit"
       variant="outline-primary"
@@ -69,7 +80,8 @@ export default {
       form: {
         subject: "",
         plants:"",
-        description: ""
+        description: "",
+        dataPlantio: ""
       },
       methodSave: "new",
         optionsList: [

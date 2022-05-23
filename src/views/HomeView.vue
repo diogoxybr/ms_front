@@ -21,6 +21,7 @@
     <template v-else>
     <div v-for="(monitor, index) in monitors" :key="index">
       <b-card :title="monitor.subject" class="mb-3">
+        <b-card-text class="mb-0">Plantada: {{ monitor.dataPlantio }}</b-card-text>
         <b-card-text class="mb-0">{{ monitor.plants }}</b-card-text>
         <b-card-text>{{ monitor.description }}</b-card-text>
 
